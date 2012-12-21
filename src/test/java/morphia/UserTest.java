@@ -7,7 +7,7 @@ import org.junit.Test;
 
 import com.github.jmkgreen.morphia.Datastore;
 import com.github.jmkgreen.morphia.Morphia;
-import com.mongodb.Mongo;
+import com.mongodb.MongoClient;
 
 public class UserTest {
 
@@ -15,7 +15,7 @@ public class UserTest {
 	
 	@Before
 	public void setUp() throws UnknownHostException {
-		ds = new Morphia().createDatastore( new Mongo(), "mtest");
+		ds = new Morphia().createDatastore( new MongoClient(), "mtest");
 
 	}
 	
