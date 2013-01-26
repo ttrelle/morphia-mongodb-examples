@@ -18,7 +18,7 @@ public class OrderDaoTest {
 	
 	@Before
 	public void setUp() throws UnknownHostException {
-		dao = new OrderDao(new Morphia().createDatastore( new MongoClient(), "odm"));
+		dao = new OrderDao(new Morphia().createDatastore( new MongoClient(), "odm_morphia"));
 		dao.deleteAll();
 	}
 	

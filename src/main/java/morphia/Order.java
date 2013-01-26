@@ -6,11 +6,9 @@ import java.util.List;
 import org.bson.types.ObjectId;
 
 import com.github.jmkgreen.morphia.annotations.Embedded;
-import com.github.jmkgreen.morphia.annotations.Entity;
 import com.github.jmkgreen.morphia.annotations.Id;
 import com.github.jmkgreen.morphia.annotations.Property;
 
-@Entity("order.morphia")
 public class Order {
 
 	@Id private ObjectId id;
