@@ -25,6 +25,16 @@ public class OrderDao extends BasicDAO<Order, ObjectId> {
 			.asList();
 	}
 	
+	List<Item> findItems(String customerName) {
+		List<Order> orders = find(createQuery().
+				field("custInfo").equal(customerName).
+				retrievedFields(true, "items")
+				).asList();
+		
+		// check for null in production code!
+		return orders.get(0).getItems();
+	}
+	
 	public void deleteAll() {
 		deleteByQuery(createQuery());
 	}
