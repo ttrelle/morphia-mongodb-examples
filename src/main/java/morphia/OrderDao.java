@@ -25,6 +25,7 @@ public class OrderDao extends BasicDAO<Order, ObjectId> {
 			.asList();
 	}
 	
+	// Projection
 	List<Item> findItems(String customerName) {
 		List<Order> orders = find(createQuery().
 				field("custInfo").equal(customerName).
